@@ -22,7 +22,7 @@ namespace TICK.Controllers
     public class TickDataController : Controller
     {
     
-        public string responseFromServer { get; private set; }
+       
 
         public async Task<Role> GetRole()
         {
@@ -73,33 +73,16 @@ namespace TICK.Controllers
         }
 
 
-        private void returnView(List<Role> model)
-        {
-            throw new NotImplementedException();
-        }
 
 
 
 
 
-        public static string ScreenScrape(string url)
-        {
-            using (System.Net.WebClient client = new System.Net.WebClient())
-            {
-
-                return client.DownloadString(url);
-            }
-        }
+      
 
 
     }
 
 
-    internal class responseContent
-    {
-        internal static Task<Stream> ReadAsStreamAsync()
-        {
-            throw new NotImplementedException();
-        }
-    }
+   
 }
