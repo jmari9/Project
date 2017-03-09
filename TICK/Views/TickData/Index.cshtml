@@ -1,8 +1,394 @@
-﻿
+﻿@using TICK.Models
+@model ViewModel
+
 @{
-    ViewBag.Title = "Index";
+
+    ViewBag.Title = "Home Page";
+
 }
 
-<h2>Index</h2>
+<h2>@ViewBag.Message</h2>
 
-@Html.ActionLink("Projects", "Data", "TickData")
+
+
+<p><b>Projects</b></p>
+
+<br />
+
+<table class="table">
+
+    <tr>
+
+
+        <th>Name</th>
+        <th>Budget</th>
+        <th>Notifications</th>
+        <th>Billable</th>
+        <th>Recurring</th>
+        <th>ClientId</th>
+        <th>OwnerId</th>
+        <th>Url</th>
+        <th>CreatedAt</th>
+        <th>UpdatedAt</th>
+
+    </tr>
+
+    @foreach (Project item in Model.Project)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Budget)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Notifications)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Billable)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Recurring)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OwnerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Url)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedAt)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<br />
+<hr />
+<br />
+
+<p><b>Users</b></p>
+
+<br />
+
+
+
+
+@if (Model.User != null)
+{
+    <table class="table">
+
+        <tr>
+
+
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th>Timezone</th>
+            <th>CreatedAt</th>
+            <th>UpdatedAt</th>
+
+        </tr>
+
+        @foreach (User item in Model.User)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Timezone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedAt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UpdatedAt)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+
+else
+{
+    <h3>No User data!</h3>
+}
+
+<br />
+<hr />
+<br />
+
+
+
+
+<br />
+<hr />
+<br />
+
+
+<p><b>Tasks</b></p>
+
+<br />
+
+<table class="table">
+
+    <tr>
+
+
+
+        <th>Name</th>
+        <th>Budget</th>
+        <th>Position</th>
+        <th>ProjectId</th>
+        <th>Billable</th>
+        <th>Url</th>
+        <th>CreatedAt</th>
+        <th>UpdatedAt</th>
+
+    </tr>
+
+    @foreach (GTask item in Model.GTask)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Budget)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Position)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Billable)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Url)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedAt)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+<br />
+<hr />
+<br />
+
+<p><b>Clients</b></p>
+
+<br />
+
+<table class="table">
+
+    <tr>
+
+
+        <th>Name</th>
+        <th>Archive</th>
+        <th>Url</th>
+        <th>UpdatedAt</th>
+
+    </tr>
+
+    @foreach (Client item in Model.Client)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Archive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Url)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedAt)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<br />
+<hr />
+<br />
+
+<p><b>Entries</b></p>
+
+<br />
+
+<table class="table">
+
+    <tr>
+
+
+        <th>Date</th>
+        <th>Hours</th>
+        <th>Notes</th>
+        <th>TaskId</th>
+        <th>UserId</th>
+        <th>Url</th>
+        <th>CreatedAt</th>
+        <th>UpdatedAt</th>
+
+    </tr>
+
+    @foreach (Entry item in Model.Entry)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hours)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Notes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaskId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Url)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedAt)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<br />
+<hr />
+<br />
+
+<p>Show entries</p>
+<br />
+
+<div class="panel panel-default">
+    <div class="panel-body">
+
+
+
+        <div class="form-group">
+            <p>Select User</p>
+
+            @Html.DropDownListFor(model => model.User[0].Id, new SelectList(Model.User, "Id", "FullName"), "  -----Select List-----  ")
+
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="1">Submit</button>
+
+    </div>
+</div>
+
+<div id="filteredData"></div>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#1").click(function (evt) {
+             $("#filteredData").load("/Home/GetEntryData",
+                { userId: $('#User_0__Id').val() });
+        });
+    });
+</script>
+
+<br />
+<hr />
+<br />
+
+
+<p>Show projects</p><br />
+
+<br />
+
+<div class="panel">
+
+
+
+    <div class="group">
+        <p>Select User</p>
+
+        @Html.DropDownListFor(model => model.User[1].Id, new SelectList(Model.User, "Id", "FullName"), "  -----Select List-----  ")
+
+    </div>
+
+    <button type="submit" class="btn btn-primary" id="2">Submit</button>
+
+</div>
+
+
+<div id="filteredDatas"></div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#2").click(function (evt) {
+             $("#filteredDatas").load("/Home/ProjectResults",
+                { userId: $('#User_1__Id').val() });
+        });
+    });
+</script>
+
+

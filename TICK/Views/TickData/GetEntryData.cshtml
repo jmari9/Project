@@ -1,0 +1,58 @@
+﻿@using TICK.Models
+@model GetEntryData
+
+<table class="table">
+
+    <tr>
+
+
+        <th>Date</th>
+        <th>Hours</th>
+        <th>Notes</th>
+        <th>TaskId</th>
+        <th>UserId</th>
+        <th>Url</th>
+        <th>CreatedAt</th>
+        <th>UpdatedAt</th>
+
+    </tr>
+
+    @foreach (Entry item in Model.Entry)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hours)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Notes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaskId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Url)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedAt)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+<p> Total: @Model.TotalHours</p>
