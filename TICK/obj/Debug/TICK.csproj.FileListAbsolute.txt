@@ -1,0 +1,96 @@
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\ApplicationInsights.config
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\roslyn\csc.exe
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\roslyn\vbc.exe
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\roslyn\VBCSCompiler.exe
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\TICK.dll.config
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\TICK.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\TICK.pdb
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\Microsoft.AI.Web.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\Newtonsoft.Json.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\System.Web.Helpers.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\System.Web.Mvc.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\System.Web.Razor.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\System.Web.Webpages.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\System.Web.Webpages.Razor.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\Microsoft.AI.Web.xml
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\Newtonsoft.Json.xml
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\System.Web.Razor.xml
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\System.Web.Webpages.xml
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\System.Web.Webpages.Razor.xml
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\System.Web.Helpers.xml
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\bin\System.Web.Mvc.xml
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\obj\Debug\TICK.csprojResolveAssemblyReference.cache
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\obj\Debug\TICK.dll
+C:\Users\Jasa\documents\visual studio 2015\Projects\TICK\TICK\obj\Debug\TICK.pdb
+D:\GitHub\TICK\TICK\bin\ApplicationInsights.config
+D:\GitHub\TICK\TICK\bin\roslyn\csc.exe
+D:\GitHub\TICK\TICK\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\GitHub\TICK\TICK\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\GitHub\TICK\TICK\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\GitHub\TICK\TICK\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\GitHub\TICK\TICK\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\GitHub\TICK\TICK\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\GitHub\TICK\TICK\bin\roslyn\System.Collections.Immutable.dll
+D:\GitHub\TICK\TICK\bin\roslyn\System.Reflection.Metadata.dll
+D:\GitHub\TICK\TICK\bin\roslyn\vbc.exe
+D:\GitHub\TICK\TICK\bin\roslyn\VBCSCompiler.exe
+D:\GitHub\TICK\TICK\bin\roslyn\VBCSCompiler.exe.config
+D:\GitHub\TICK\TICK\bin\TICK.dll.config
+D:\GitHub\TICK\TICK\bin\TICK.dll
+D:\GitHub\TICK\TICK\bin\TICK.pdb
+D:\GitHub\TICK\TICK\bin\Microsoft.AI.Agent.Intercept.dll
+D:\GitHub\TICK\TICK\bin\Microsoft.AI.DependencyCollector.dll
+D:\GitHub\TICK\TICK\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\GitHub\TICK\TICK\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\GitHub\TICK\TICK\bin\Microsoft.AI.Web.dll
+D:\GitHub\TICK\TICK\bin\Microsoft.AI.WindowsServer.dll
+D:\GitHub\TICK\TICK\bin\Microsoft.ApplicationInsights.dll
+D:\GitHub\TICK\TICK\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\GitHub\TICK\TICK\bin\Microsoft.Web.Infrastructure.dll
+D:\GitHub\TICK\TICK\bin\Newtonsoft.Json.dll
+D:\GitHub\TICK\TICK\bin\System.Web.Helpers.dll
+D:\GitHub\TICK\TICK\bin\System.Web.Mvc.dll
+D:\GitHub\TICK\TICK\bin\System.Web.Razor.dll
+D:\GitHub\TICK\TICK\bin\System.Web.Webpages.Deployment.dll
+D:\GitHub\TICK\TICK\bin\System.Web.Webpages.dll
+D:\GitHub\TICK\TICK\bin\System.Web.Webpages.Razor.dll
+D:\GitHub\TICK\TICK\bin\Microsoft.AI.DependencyCollector.xml
+D:\GitHub\TICK\TICK\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\GitHub\TICK\TICK\bin\Microsoft.AI.Web.xml
+D:\GitHub\TICK\TICK\bin\Microsoft.AI.WindowsServer.xml
+D:\GitHub\TICK\TICK\bin\Microsoft.ApplicationInsights.xml
+D:\GitHub\TICK\TICK\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\GitHub\TICK\TICK\bin\Newtonsoft.Json.xml
+D:\GitHub\TICK\TICK\bin\System.Web.Razor.xml
+D:\GitHub\TICK\TICK\bin\System.Web.Webpages.xml
+D:\GitHub\TICK\TICK\bin\System.Web.Webpages.Deployment.xml
+D:\GitHub\TICK\TICK\bin\System.Web.Webpages.Razor.xml
+D:\GitHub\TICK\TICK\bin\System.Web.Helpers.xml
+D:\GitHub\TICK\TICK\bin\System.Web.Mvc.xml
+D:\GitHub\TICK\TICK\obj\Debug\TICK.csprojResolveAssemblyReference.cache
+D:\GitHub\TICK\TICK\obj\Debug\TICK.dll
+D:\GitHub\TICK\TICK\obj\Debug\TICK.pdb
