@@ -87,7 +87,7 @@ namespace TICK.Controllers
             HttpClient client = new HttpClient();
 
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0 (jasminka.maric89@gmail.com)");
+            client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0 (mailaddress)");
 
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Token", "token=" + role.api_token);
 
@@ -107,7 +107,7 @@ namespace TICK.Controllers
             HttpClient client = new HttpClient();
 
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0 (jasminka.maric89@gmail.com)");
+            client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0 (mailaddress)");
 
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Token", "token=" + role.api_token);
 
@@ -127,7 +127,7 @@ namespace TICK.Controllers
             HttpClient client = new HttpClient();
 
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0 (jasminka.maric89@gmail.com)");
+            client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0 (mailaddress)");
 
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Token", "token=" + role.api_token);
 
@@ -148,7 +148,7 @@ namespace TICK.Controllers
             HttpClient client = new HttpClient();
 
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0 (jasminka.maric89@gmail.com)");
+            client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0 (mailaddress)");
 
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Token", "token=" + role.api_token);
 
@@ -207,7 +207,7 @@ namespace TICK.Controllers
             HttpClient client = new HttpClient();
 
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0 (jasminka.maric89@gmail.com)");
+            client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0 (mailaddress)");
 
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Token", "token=" + role.api_token);
 
