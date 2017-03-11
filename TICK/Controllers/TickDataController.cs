@@ -14,9 +14,7 @@ using System.Collections;
 using TICK.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-
-
-
+using System.Net.Mail;
 
 namespace TICK.Controllers
 {
@@ -178,12 +176,71 @@ namespace TICK.Controllers
         {
 
             List<Entry> entries = await GetEntry(userId);
+
+            List<int> taskIds = entries.Select(e => e.TaskId).Distinct().ToList();
+
+            List<TaskData> tasks = new List<TaskData>();
+
+            foreach (int taskId in taskIds)
+            {
+                TaskData task = await GetTaskData(taskId);
+                if (task != null)
+                {
+                    tasks.Add(task);
+                }
+            }
+            List<Project> projects = tasks.GroupBy(t => t.Project.Id).Select(g => g.First()).ToList().Select(t => t.Project).ToList();
+
             GetEntryData model = new GetEntryData();
             model.Entry = entries;
+            model.Projects = projects;
 
             return PartialView("EntryData", model);
 
         }
+
+
+        public async Task<TaskData> GetTaskData(int taskId)
+        {
+            Role role = await GetRole();
+            TaskData gtask = null;
+            HttpClient client = new HttpClient();
+
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0 (jasminka.maric89@gmail.com)");
+
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Token", "token=" + role.api_token);
+
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12 | SecurityProtocolType.Ssl3;
+
+            HttpResponseMessage task = await client.GetAsync("https://www.tickspot.com/" + role.subscription_id + "/api/v2/tasks/" + taskId + ".json");
+            String jsonString = await task.Content.ReadAsStringAsync();
+            gtask = JsonConvert.DeserializeObject<TaskData>(jsonString);
+
+            return gtask;
+        }
+
+
+
+        private void SendEmail()
+        {
+            MailMessage message = new MailMessage();
+            message.From = new MailAddress("Your mailaddress", "Sender Name", System.Text.Encoding.UTF8);
+            message.Subject = "Warning!";
+            message.To.Add("mailaddress");
+            message.Body = "Please enter hours!";
+            message.IsBodyHtml = true;
+            message.SubjectEncoding = System.Text.Encoding.UTF8;
+
+            SmtpClient client = new SmtpClient();
+            client.Port = 25;
+            client.Host = "smtp.gmail.com";
+            client.EnableSsl = true;
+            client.UseDefaultCredentials = false;
+            client.Credentials = new System.Net.NetworkCredential("From Email Address", "Password(Sender Mail)");
+            client.Send(message);
+        }
+
 
 
     }

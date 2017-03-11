@@ -2,25 +2,62 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Newtonsoft.Json;
 
 namespace TICK.Models
 {
     public class TaskData
     {
-       
-            public string id { get; set; }
-            public string name { get; set; }
-            public double budget { get; set; }
-            public int position { get; set; }
-            public int project_id { get; set; }
-            public object date_closed { get; set; }
-            public bool billable { get; set; }
-            public string url { get; set; }
-            public string created_at { get; set; }
-            public string updated_at { get; set; }
-            public double total_hours { get; set; }
-            public List<Entry> entries { get; set; }
-            public List<Project> project { get; set; }
-        
+
+        [JsonProperty(PropertyName = "id")]
+        public string Id { get; set; }
+
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+
+        [JsonProperty(PropertyName = "budget")]
+        public float Budget { get; set; }
+
+        [JsonProperty(PropertyName = "position")]
+        public int Position { get; set; }
+
+        [JsonProperty(PropertyName = "project_id")]
+        public int ProjectId { get; set; }
+
+        [JsonProperty(PropertyName = "date_closed")]
+        public DateTime? DateClosed { get; set; }
+
+        [JsonProperty(PropertyName = "billable")]
+        public bool Billable { get; set; }
+
+        [JsonProperty(PropertyName = "url")]
+        public string Url { get; set; }
+
+        [JsonProperty(PropertyName = "created_at")]
+        public string CreatedAt { get; set; }
+        [JsonProperty(PropertyName = "updated_at")]
+        public string UpdatedAt { get; set; }
+
+        [JsonProperty(PropertyName = "total_hours")]
+        public float TotalHours { get; set; }
+
+        [JsonProperty(PropertyName = "entries")]
+        public TaskEntries Entries { get; set; }
+
+        [JsonProperty(PropertyName = "project")]
+        public Project Project { get; set; }
+
+    }
+
+    public class TaskEntries
+    {
+        [JsonProperty(PropertyName = "count")]
+        public int Count { get; set; }
+
+        [JsonProperty(PropertyName = "url")]
+        public string Url { get; set; }
+
+        [JsonProperty(PropertyName = "updated_at")]
+        public string UpdatedAt { get; set; }
     }
 }

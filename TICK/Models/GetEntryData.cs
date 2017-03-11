@@ -10,5 +10,7 @@ namespace TICK.Models
     {
         public List<Entry> Entry { get; set; }
         public float TotalHours { get { return Entry.Sum(item => item.Hours); ; } }
+
+        public List<Project> Projects { get; set; }
     }
 }
