@@ -68,7 +68,7 @@
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                
+
                 @Html.ActionLink("Delete", "Delete", new { id = item.Id })
             </td>
         </tr>
@@ -126,7 +126,7 @@
                 </td>
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                  
+
                     @Html.ActionLink("Delete", "Delete", new { id = item.Id })
                 </td>
             </tr>
@@ -248,7 +248,7 @@ else
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-               |
+                |
                 @Html.ActionLink("Delete", "Delete", new { id = item.Id })
             </td>
         </tr>
@@ -309,7 +309,7 @@ else
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                
+
                 @Html.ActionLink("Delete", "Delete", new { id = item.Id })
             </td>
         </tr>
@@ -372,23 +372,44 @@ else
 
         @Html.DropDownListFor(model => model.User[1].Id, new SelectList(Model.User, "Id", "FullName"), "  -----Select List-----  ")
 
+        <br />
+        <br />
+        <br />
+
+        <fieldset>
+
+            @Html.Label("StartDate", "Start Date:")
+            @Html.TextBox("startDate", string.Empty, new { @class = "datepicker" })
+            @Html.Label("enddate", "End Date:")
+            @Html.TextBox("endDate", string.Empty, new { @class = "datepicker" })
+
+        </fieldset>
+
     </div>
 
-    <button type="submit" class="btn btn-primary" id="2">Submit</button>
+    <button type="submit" class="btn btn-primary" id="1">Submit</button>
 
 </div>
 
 
-<div id="filteredDatas"></div>
+<div id="filteredData"></div>
+
+<script>
+  $(function() {
+      $(".datepicker").datepicker({ dateFormat: 'yy-mm-dd' });
+  });
+</script>
 
 <script type="text/javascript">
 
     $(document).ready(function () {
-        $("#2").click(function (evt) {
-             $("#filteredDatas").load("/Home/ProjectResults",
-                { userId: $('#User_1__Id').val() });
+        $("#1").click(function (evt) {
+             $("#filteredData").load("/Home/GetEntryData",
+                {
+                    userId: $('#User_0__Id').val(),
+                    startDate: $('#startDate').val(),
+                    endDate: $('#endDate').val()
+                });
         });
     });
-</script>
-
-
+</script>  

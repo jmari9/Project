@@ -141,7 +141,7 @@ namespace TICK.Controllers
         }
 
 
-        public async Task<List<Entry>> GetEntry(int userId = 0)
+        public async Task<List<Entry>> GetEntry(int userId = 0, DateTime? startDate = null, DateTime? endDate = null)
         {
             Role role = await GetRole();
             List<Entry> entries = new List<Entry>();
@@ -154,7 +154,20 @@ namespace TICK.Controllers
 
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12 | SecurityProtocolType.Ssl3;
 
-            string parameters = "?start_date='2015-12-27'&end_date='2018-02-28'&billable='true'";
+            string parameters = "";
+
+            if (startDate == null || endDate == null)
+            {
+                parameters = "?start_date='2015-12-27'&end_date='2018-02-28'&billable='true'";
+            }
+
+            else
+            {
+                DateTime start = (DateTime)startDate;
+                DateTime end = (DateTime)endDate;
+                parameters = String.Format("?start_date={0}&end_date={1}&billable='true'", HttpUtility.UrlEncode(start.ToString("yyyy-MM-dd")), HttpUtility.UrlEncode(end.ToString("yyyy-MM-dd")));
+            }
+
 
             if (userId != 0)
             { parameters += "&user_id=" + userId; }
@@ -172,10 +185,10 @@ namespace TICK.Controllers
 
 
 
-        public async Task<ActionResult> GetEntryData(int userId)
+        public async Task<ActionResult> GetEntryData(int userId, DateTime startDate, DateTime endDate)
         {
 
-            List<Entry> entries = await GetEntry(userId);
+            List<Entry> entries = await GetEntry(userId, startDate, endDate);
 
             List<int> taskIds = entries.Select(e => e.TaskId).Distinct().ToList();
 
